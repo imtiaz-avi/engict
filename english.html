@@ -153,28 +153,37 @@ We provide Personalized Solutions for Every Student’s Needs, ensuring that eac
                   </div>
                </div>
             </div>
-            <div class="row">
-               <div class="col-md-6">
-                  <div class="our_work">
-                     <figure><img src="images/work1.jpg" alt="#"/></figure>
-                  </div>
-               </div>
-               <div class="col-md-6">
-                  <div class="our_work">
-                     <figure><img src="images/work2.jpg" alt="#"/></figure>
-                  </div>
-               </div>
-               <div class="col-md-6">
-                  <div class="our_work">
-                     <figure><img src="images/work3.jpg" alt="#"/></figure>
-                  </div>
-               </div>
-               <div class="col-md-6">
-                  <div class="our_work">
-                     <figure><img src="images/work4.jpg" alt="#"/></figure>
-                  </div>
-               </div>
-            </div>
+<div class="row">
+    <div class="col-md-6">
+        <div class="our_work">
+            <a href="https://g.dev/imtiazsiddique" class="fancybox" data-fancybox="gallery" target="_blank">
+                <figure class="animate-on-scroll"><img src="images/work1.jpg" alt="#"/></figure>
+            </a>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="our_work">
+            <a href="https://courses.edx.org/certificates/6536cfe86fc54ab69c3cc2a1a3006acf" class="fancybox" data-fancybox="gallery" target="_blank">
+                <figure class="animate-on-scroll"><img src="images/work2.jpg" alt="#"/></figure>
+            </a>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="our_work">
+            <a href="https://coursera.org/verify/L9A2TYGAXB3B" class="fancybox" data-fancybox="gallery" target="_blank">
+                <figure class="animate-on-scroll"><img src="images/work3.jpg" alt="#"/></figure>
+            </a>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="our_work">
+            <a href="https://courses.edx.org/certificates/44f1927e5fcb4b748f9197dec79d8065" class="fancybox" data-fancybox="gallery" target="_blank">
+                <figure class="animate-on-scroll"><img src="images/work4.jpg" alt="#"/></figure>
+            </a>
+        </div>
+    </div>
+</div>
+
          </div>
       </div>
       <!-- end work -->
@@ -229,5 +238,36 @@ We provide Personalized Solutions for Every Student’s Needs, ensuring that eac
       <script src="js/jquery-3.0.0.min.js"></script>
       <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
       <script src="js/custom.js"></script>
+	  
+	  
+	  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const elements = document.querySelectorAll('.animate-on-scroll');
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target); // Unobserve to prevent retriggering
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        elements.forEach(element => {
+            observer.observe(element);
+        });
+    });
+</script>
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
    </body>
 </html>

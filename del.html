@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scroll Animation Example</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css">
+    <style>
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 1s ease-out, transform 1s ease-out;
+        }
+
+        .animate-on-scroll.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="our_work">
+            <a href="images/work1.jpg" class="fancybox" data-fancybox="gallery" target="_blank">
+                <figure class="animate-on-scroll"><img src="images/work1.jpg" alt="#"/></figure>
+            </a>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="our_work">
+            <a href="images/work2.jpg" class="fancybox" data-fancybox="gallery" target="_blank">
+                <figure class="animate-on-scroll"><img src="images/work2.jpg" alt="#"/></figure>
+            </a>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="our_work">
+            <a href="images/work3.jpg" class="fancybox" data-fancybox="gallery" target="_blank">
+                <figure class="animate-on-scroll"><img src="images/work3.jpg" alt="#"/></figure>
+            </a>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="our_work">
+            <a href="images/work4.jpg" class="fancybox" data-fancybox="gallery" target="_blank">
+                <figure class="animate-on-scroll"><img src="images/work4.jpg" alt="#"/></figure>
+            </a>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const elements = document.querySelectorAll('.animate-on-scroll');
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target); // Unobserve to prevent retriggering
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        elements.forEach(element => {
+            observer.observe(element);
+        });
+    });
+</script>
+
+</body>
+</html>
