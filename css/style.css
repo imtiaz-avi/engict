@@ -592,56 +592,35 @@ button {
 
 
 
-.hover15 figure {
+
+
+
+
+
+
+
+/* Shine */
+.hover14 figure {
     position: relative;
     overflow: hidden;
 }
 
-.hover15 figure::before {
+.hover14 figure::before {
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: 0;
+    left: -75%;
     z-index: 2;
     display: block;
     content: '';
-    width: 0;
-    height: 0;
-    background: rgba(255, 255, 255, .9);
-    border-radius: 100%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    opacity: 0;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(0, 0, 255, 0) 0%, rgba(0, 0, 255, 0.3) 100%);
+    transform: skewX(-25deg);
+    animation: shine 3s infinite;
 }
 
-.hover15 figure:hover::before {
-    -webkit-animation: circle 1s;
-    animation: circle 1s;
-}
-
-@-webkit-keyframes circle {
-    0% {
-        opacity: 1;
-    }
-    40% {
-        opacity: 1;
-    }
+@keyframes shine {
     100% {
-        width: 200%;
-        height: 200%;
-        opacity: 0;
-    }
-}
-
-@keyframes circle {
-    0% {
-        opacity: 1;
-    }
-    40% {
-        opacity: 1;
-    }
-    100% {
-        width: 200%;
-        height: 200%;
-        opacity: 0;
+        left: 125%;
     }
 }
