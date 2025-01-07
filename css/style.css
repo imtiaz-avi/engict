@@ -647,14 +647,16 @@ button {
     list-style: none;
     position: relative;
     height: 100%;
+
 }
 
 #slider ul li {
     width: 100%;
     height: 100%;
-    text-align: center;
+    text-align: left;
     line-height: 300px; /* Adjust this as needed for centering */
     background-color: #fff; /* Add any background color or image */
+	
 }
 
 #slider a.control_prev, #slider a.control_next {

@@ -148,5 +148,5 @@ jQuery(document).ready(function ($) {
         if ($('#checkbox').is(':checked')) {
             moveRight();
         }
-    }, 3000);
+    }, 4000);
 });
