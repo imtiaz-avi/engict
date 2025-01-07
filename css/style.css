@@ -614,7 +614,7 @@ button {
     content: '';
     width: 50%;
     height: 100%;
-    background: linear-gradient(to right, rgba(0, 0, 255, 0) 0%, rgba(0, 0, 255, 0.3) 100%);
+    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, .5) 100%);
     transform: skewX(-25deg);
     animation: shine 3s infinite;
 }
