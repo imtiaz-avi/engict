@@ -624,3 +624,63 @@ button {
         left: 125%;
     }
 }
+
+
+
+
+
+
+
+
+
+#slider {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+#slider ul {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    position: relative;
+    height: 100%;
+}
+
+#slider ul li {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    line-height: 300px; /* Adjust this as needed for centering */
+    background-color: #fff; /* Add any background color or image */
+}
+
+#slider a.control_prev, #slider a.control_next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 999;
+    display: block;
+    width: 30px;
+    height: 30px;
+    background: #000;
+    color: #fff;
+    text-align: center;
+    line-height: 30px;
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+#slider a.control_prev {
+    left: 10px;
+}
+
+#slider a.control_next {
+    right: 10px;
+}
+
+.slider_option {
+    margin-top: 10px;
+}
