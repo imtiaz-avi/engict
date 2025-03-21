@@ -265,15 +265,18 @@
          </div>
       </footer>
       <!-- end footer -->
-      <!-- Javascript files-->
+
+
+
+
+
+
+	         <!-- Javascript files-->
       <script src="js/jquery.min.js"></script>
       <script src="js/bootstrap.bundle.min.js"></script>
       <script src="js/jquery-3.0.0.min.js"></script>
       <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
       <script src="js/custom.js"></script>
-	  
-	  
-	  
 	  
 <script>
     document.addEventListener('DOMContentLoaded', function () {
@@ -293,15 +296,20 @@
         elements.forEach(element => {
             observer.observe(element);
         });
+
+        // *** Scroll to '.multipurpose' if URL contains ?scroll=multipurpose ***
+        let params = new URLSearchParams(window.location.search);
+        let scrollTo = params.get("scroll");
+        if (scrollTo) {
+            let target = document.querySelector('.' + scrollTo);
+            if (target) {
+                setTimeout(() => {
+                    target.scrollIntoView({ behavior: "smooth", block: "start" });
+                }, 500); // Delayed to ensure page loads first
+            }
+        }
     });
 </script>
-  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-   </body>
+
+</body>
 </html>
