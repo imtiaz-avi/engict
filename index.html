@@ -271,7 +271,7 @@
 
 
 
-	         <!-- Javascript files-->
+      <!-- Javascript files-->
       <script src="js/jquery.min.js"></script>
       <script src="js/bootstrap.bundle.min.js"></script>
       <script src="js/jquery-3.0.0.min.js"></script>
@@ -297,11 +297,11 @@
             observer.observe(element);
         });
 
-        // *** Scroll to '.multipurpose' if URL contains ?scroll=multipurpose ***
+        // *** Scroll to '.admission' if URL contains ?scroll=admission ***
         let params = new URLSearchParams(window.location.search);
         let scrollTo = params.get("scroll");
-        if (scrollTo) {
-            let target = document.querySelector('.' + scrollTo);
+        if (scrollTo === "admission") {
+            let target = document.querySelector('.admission');
             if (target) {
                 setTimeout(() => {
                     target.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -313,3 +313,4 @@
 
 </body>
 </html>
+
